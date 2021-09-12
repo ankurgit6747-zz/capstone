@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/Header";
+import { Container } from "react-bootstrap";
+import RegisterScreen from "./screens/RegisterScreen";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <main className="py-3">
+        <Container>
+          <Route path="/register" component={RegisterScreen} />
+          {/* <Route path="/order/:id" component={OrderScreen} />
+          <Route path="/bespeaking" component={PlaceOrderScreen} />
+          <Route path="/confirm" component={BookingScreen} />
+          <Route path="/login" component={SigninScreen} />
+          <Route path="/profile" component={ProfileScreen} />
+          <Route path="/counsellor/:id" component={IndividualScreen} />
+          <Route path="/sessions/:id?" component={SessionBookingScreen} />
+          <Route path="/admin/userlist" component={UsersListScreen} />
+          <Route
+            path="/admin/counsellorlist"
+            component={CounsellorListScreen}
+          />
+
+          <Route
+            path="/admin/counsellor/:id/edit"
+            component={CounsellorEditScreen}
+          />
+
+          <Route path="/admin/orderlist" component={OrderListScreen} />
+          <Route path="/admin/users/:id/edit" component={UserEditScreen} />
+          <Route path="/dashboard" component={DashboardScreen} />
+          <Route path="/admin_dashboard" component={AdminDashboardScreen} />
+
+          <Route path="/" component={CounsellorScreen} exact /> */}
+        </Container>
+      </main>
+    </Router>
   );
 }
 
