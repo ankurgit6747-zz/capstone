@@ -6,16 +6,22 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { login } from "../actions/userActions";
-import logImg from "../svg/login.svg";
+// import logImg from "../svg/login.svg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 //screen
 const SigninScreen = ({ location, history }) => {
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
 
-  const userLogin = useSelector((state) => state.userLogin);
+  const userLogin = useSelector(state => state.userLogin);
   const { loading, error, userInfo } = userLogin;
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
@@ -26,18 +32,17 @@ const SigninScreen = ({ location, history }) => {
     }
   }, [history, userInfo, redirect]);
 
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
 
     dispatch(login(email, password));
   };
   return (
     <Container>
-      <Row>
+      <Row data-aos="zoom-out">
         <Col md={8}>
           <FormContainer>
             <h1>Sign In</h1>
-
             {error && <Message variant="danger">{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
@@ -47,7 +52,8 @@ const SigninScreen = ({ location, history }) => {
                   type="email"
                   placeholder="Enter email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}></Form.Control>
+                  onChange={e => setEmail(e.target.value)}
+                ></Form.Control>
               </Form.Group>
 
               <Form.Group controlId="password">
@@ -56,7 +62,8 @@ const SigninScreen = ({ location, history }) => {
                   type="password"
                   placeholder="Enter password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}></Form.Control>
+                  onChange={e => setPassword(e.target.value)}
+                ></Form.Control>
               </Form.Group>
 
               <Button type="submit" variant="primary">
@@ -68,9 +75,8 @@ const SigninScreen = ({ location, history }) => {
               <Col>
                 New User ?{" "}
                 <Link
-                  to={
-                    redirect ? `/register?redirect=${redirect}` : "/register"
-                  }>
+                  to={redirect ? `/register?redirect=${redirect}` : "/register"}
+                >
                   Register
                 </Link>
               </Col>
@@ -78,7 +84,7 @@ const SigninScreen = ({ location, history }) => {
           </FormContainer>
         </Col>
         <Col md={4} className="login">
-          <Image className="loginImg" src={logImg} />
+          {/* <Image className="loginImg" src={logImg} /> */}
         </Col>
       </Row>
     </Container>

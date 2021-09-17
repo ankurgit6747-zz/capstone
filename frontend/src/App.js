@@ -1,20 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { Container } from "react-bootstrap";
 import RegisterScreen from "./screens/RegisterScreen";
 import SigninScreen from "./screens/SigninScreen";
 import CounsellorScreen from "./screens/CounsellorScreen";
+import img from "./components/img.png";
 
 function App() {
   return (
     <Router>
       <Header />
+
       <main className="py-3">
         <Container>
           <Route path="/register" component={RegisterScreen} />
           <Route path="/login" component={SigninScreen} />
-          <Route path="/" component={CounsellorScreen} exact /> 
+          <Route path="/" component={CounsellorScreen} exact />
+          <img src={img} alt="" />
+
           {/* <Route path="/order/:id" component={OrderScreen} />
           <Route path="/bespeaking" component={PlaceOrderScreen} />
           <Route path="/confirm" component={BookingScreen} />
@@ -40,6 +45,7 @@ function App() {
           */}
         </Container>
       </main>
+      <Footer />
     </Router>
   );
 }
