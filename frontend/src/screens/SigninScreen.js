@@ -6,7 +6,7 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { login } from "../actions/userActions";
-// import logImg from "../svg/login.svg";
+import logImg from "../svg/login.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -84,7 +84,7 @@ const SigninScreen = ({ location, history }) => {
           </FormContainer>
         </Col>
         <Col md={4} className="login">
-          {/* <Image className="loginImg" src={logImg} /> */}
+          <Image className="loginImg" src={logImg} />
         </Col>
       </Row>
     </Container>

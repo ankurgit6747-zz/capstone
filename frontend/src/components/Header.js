@@ -3,10 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { logout } from "../actions/userActions";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import "../bootstrap.min.css";
-// import img from "./img.png";
-
 import Working from "./Working";
 
 const Header = ({ history }) => {
@@ -21,18 +19,14 @@ const Header = ({ history }) => {
 
   return (
     <header>
-      <Navbar
-        bg="light"
-        variant="light"
-        expand="xxl"
-        fixed="top"
-        collapseOnSelect
-      >
+      <Navbar expand="xl" fixed="top" collapseOnSelect>
+        <Working />
+
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>Hack Your Carrer</Navbar.Brand>
+            <Navbar.Brand>Hack Your Career</Navbar.Brand>
           </LinkContainer>
-          <Working />
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">
@@ -70,7 +64,11 @@ const Header = ({ history }) => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i>Sign In
+                    <i className="fas fa-user"></i>
+                    <b>Sign In</b>
+                    <b> &nbsp; &nbsp; &nbsp; About Us</b>
+                    <b> &nbsp; &nbsp; &nbsp; FAQs</b>
+                    <b> &nbsp; &nbsp; &nbsp; Contact Us</b>
                   </Nav.Link>
                 </LinkContainer>
               )}

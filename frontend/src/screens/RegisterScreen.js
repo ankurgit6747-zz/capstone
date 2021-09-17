@@ -6,8 +6,10 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { register } from "../actions/userActions";
-// import regImg from "../svg/register.svg";
-// import signup from '../svgs/signup.svg'
+import regImg from "../svg/register.svg";
+import signup from "../svgs/signup.svg";
+// import img1 from "../components/img1.webp";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 //screen
@@ -112,7 +114,7 @@ const RegisterScreen = ({ location, history }) => {
         </Col>
 
         <Col className="register" md={4}>
-          {/* <Image className="regImg" src={signup} /> */}
+          <Image src={regImg} />
         </Col>
       </Row>
     </Container>

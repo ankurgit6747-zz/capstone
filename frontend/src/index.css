@@ -1,7 +1,18 @@
+body {
+  background-image: url("http://www.pngmagic.com/product_images/black-background-for-website-banner-low.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main {
-  min-height: 90vh;
+  min-height: 100vh;
   margin-top: 100px;
-  background-color: #303030;
+}
+.img {
+  margin-top: 180px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 h3 {
