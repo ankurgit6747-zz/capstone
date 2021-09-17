@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Life of Cogs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A web-app where people can book counselling sessions with listed industry proffessionals
 
-## Available Scripts
+> Note : "It's just a Personal Project"
 
-In the project directory, you can run:
+Built with the *MERN* stack & Redux.
+<img width="1792" alt="Screenshot 2021-01-05 at 7 31 20 AM" src="https://user-images.githubusercontent.com/67645175/103598218-16847e00-4f28-11eb-8347-1292473618a3.png">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Live Demo --> [lifeofcogs-app](https://cogsprojectapp.herokuapp.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
+- Authentication 
+- Authorisation
+- List of available Counsellors 
+- User Profile with session details
+- User Dashboard
+- Admin(Superuser) managment
+- Admin Dashboard
+- Complete process of booking a session to providing personal notes to the respective counsellor and also scheduling date and time
 
-### `npm test`
+There are also some insignificant features in the app like
+>  - after scheduling a session and confirmed from the admin side, the join button will be disable till scheduled time.
+> Different dashboards for users and admins
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Demo of the App
+https://user-images.githubusercontent.com/67645175/103601656-1b4d3000-4f30-11eb-8a93-3e72a775b0f2.mp4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### ES Modules in Node
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I have used ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Also, when importing a file *(not a package)*, be sure to add    `.js` at the end or you will get a "module not found" error
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You can also install and setup Babel if you would like
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Env Variables
+```
+NODE_ENV = 
+PORT = 
+MONGO_URI = your mongodb uri
+JWT_SECRET = 
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Install Dependencies (frontend & backend)
 
-### Code Splitting
+```
+npm install
+cd frontend
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Run
 
-### Analyzing the Bundle Size
+```
+# Run frontend (:3000) & backend (:5000)
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run backend only
+npm run server
+```
+---
+## Future Note 
+```
+~ Addition of review system 
+~ Oauth : Google, Facebook or Github
+~ Include users' spotify playlist of songs/podcast in there dashboard with spotify's api
+```

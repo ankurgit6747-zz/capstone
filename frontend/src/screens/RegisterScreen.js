@@ -6,7 +6,8 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { register } from "../actions/userActions";
-import regImg from "../svg/register.svg";
+// import regImg from "../svg/register.svg";
+import signup from '../svgs/signup.svg'
 
 //screen
 const RegisterScreen = ({ location, history }) => {
@@ -40,7 +41,7 @@ const RegisterScreen = ({ location, history }) => {
     }
   };
   return (
-    <Container>
+    <Container >
       <Row>
         <Col md={8}>
           <FormContainer>
@@ -105,7 +106,7 @@ const RegisterScreen = ({ location, history }) => {
         </Col>
 
         <Col className="register" md={4}>
-          <Image className="regImg" src={regImg} />
+          <Image className="regImg" src={signup} />
         </Col>
       </Row>
     </Container>

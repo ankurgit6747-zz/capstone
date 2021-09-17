@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import { Container } from "react-bootstrap";
 import RegisterScreen from "./screens/RegisterScreen";
+import SigninScreen from "./screens/SigninScreen";
+import CounsellorScreen from "./screens/CounsellorScreen";
 
 function App() {
   return (
@@ -11,10 +13,11 @@ function App() {
       <main className="py-3">
         <Container>
           <Route path="/register" component={RegisterScreen} />
+          <Route path="/login" component={SigninScreen} />
+          <Route path="/" component={CounsellorScreen} exact /> 
           {/* <Route path="/order/:id" component={OrderScreen} />
           <Route path="/bespeaking" component={PlaceOrderScreen} />
           <Route path="/confirm" component={BookingScreen} />
-          <Route path="/login" component={SigninScreen} />
           <Route path="/profile" component={ProfileScreen} />
           <Route path="/counsellor/:id" component={IndividualScreen} />
           <Route path="/sessions/:id?" component={SessionBookingScreen} />
@@ -34,7 +37,7 @@ function App() {
           <Route path="/dashboard" component={DashboardScreen} />
           <Route path="/admin_dashboard" component={AdminDashboardScreen} />
 
-          <Route path="/" component={CounsellorScreen} exact /> */}
+          */}
         </Container>
       </main>
     </Router>
