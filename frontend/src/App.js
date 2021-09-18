@@ -5,6 +5,9 @@ import { Container } from "react-bootstrap";
 import RegisterScreen from "./screens/RegisterScreen";
 import SigninScreen from "./screens/SigninScreen";
 import CounsellorScreen from "./screens/CounsellorScreen";
+import ProfileScreen from "./screens/ProfileScreen";
+import UsersListScreen from "./screens/UsersListScreen";
+import CounsellorListScreen from "./screens/CounsellorsListScreen";
 
 function App() {
   return (
@@ -15,17 +18,17 @@ function App() {
           <Route path="/register" component={RegisterScreen} />
           <Route path="/login" component={SigninScreen} />
           <Route path="/" component={CounsellorScreen} exact /> 
-          {/* <Route path="/order/:id" component={OrderScreen} />
-          <Route path="/bespeaking" component={PlaceOrderScreen} />
-          <Route path="/confirm" component={BookingScreen} />
           <Route path="/profile" component={ProfileScreen} />
-          <Route path="/counsellor/:id" component={IndividualScreen} />
-          <Route path="/sessions/:id?" component={SessionBookingScreen} />
           <Route path="/admin/userlist" component={UsersListScreen} />
           <Route
             path="/admin/counsellorlist"
             component={CounsellorListScreen}
           />
+          {/* <Route path="/order/:id" component={OrderScreen} />
+          <Route path="/bespeaking" component={PlaceOrderScreen} />
+          <Route path="/confirm" component={BookingScreen} />
+          <Route path="/counsellor/:id" component={IndividualScreen} />
+          <Route path="/sessions/:id?" component={SessionBookingScreen} />
 
           <Route
             path="/admin/counsellor/:id/edit"

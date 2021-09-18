@@ -18,9 +18,9 @@ const Header = ({ history }) => {
 
   return (
     <header>
-      <Navbar bg="light" variant="light" expand="lg" collapseOnSelect>
+      <Navbar bg="primary" variant="light" expand="lg" collapseOnSelect>
         <Container>
-          <LinkContainer to="/">
+          <LinkContainer to="/" >
             <Navbar.Brand>Hack Your Carrer</Navbar.Brand>
           </LinkContainer>
 
@@ -48,9 +48,9 @@ const Header = ({ history }) => {
                 </NavDropdown>
               ) : userInfo ? (
                 <NavDropdown title={userInfo.name} id="username">
-                  <LinkContainer to="/dashboard">
+                  {/* <LinkContainer to="/dashboard">
                     <NavDropdown.Item>Dashboard</NavDropdown.Item>
-                  </LinkContainer>
+                  </LinkContainer> */}
                   <LinkContainer to="/profile">
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
