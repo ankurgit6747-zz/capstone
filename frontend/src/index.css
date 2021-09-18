@@ -5,6 +5,7 @@ body {
 }
 
 main {
+  margin-top: -40px;
   min-height: 110vh;
 }
 

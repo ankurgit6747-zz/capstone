@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import contact from "../svg/contact.svg";
 import { Image } from "react-bootstrap";
 import EmailIcon from "@mui/icons-material/Email";
-import ContactsIcon from "@mui/icons-material/Contacts";
+import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import "./Contact.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -25,7 +25,7 @@ const Contact = () => {
             <span>hackurcareer@gmail.com</span>
             <li>
               <b>
-                <ContactsIcon />
+                <AddIcCallIcon />
               </b>
             </li>
             <span>7083368055</span>
