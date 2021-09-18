@@ -19,7 +19,7 @@ const Header = ({ history }) => {
 
   return (
     <header>
-      <Navbar expand="xl" fixed="top" collapseOnSelect>
+      <Navbar expand="xl" collapseOnSelect>
         <Working />
 
         <Container>

@@ -31,17 +31,19 @@ const Contact = () => {
             <span>7083368055</span>
           </ul>
         </div>
-        <Image width={400} src={contact} />
         <div className="col">
           <div className="row">
             <form className="content">
-              <h4>Send Msg</h4>
+              <h4>Send Message:</h4>
               <input type="text" placeholder="Enter email" required />
               <input type="text" placeholder="Enter Message" required />
               <button>Send</button>
             </form>
           </div>
         </div>
+      </div>
+      <div className="row">
+        <Image width={400} src={contact} />
       </div>
     </div>
   );

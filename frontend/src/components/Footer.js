@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <div>
-      <footer class="p-5  text-white text-center position-relative">
+      <footer class="p-5  text-black text-center position-relative">
         <div class="container">
           <Image
             data-aos="zoom-out-down"
@@ -25,6 +25,7 @@ const Footer = () => {
             {/* <ArrowCircleUpIcon /> */}
             Copyright &copy; 2021 Hack ur Career | Rights reserved
           </p>
+          <button onClick={() => window.scroll(0, 0)}>Scroll to Top</button>
         </div>
       </footer>
     </div>

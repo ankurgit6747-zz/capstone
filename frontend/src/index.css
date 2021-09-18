@@ -5,15 +5,8 @@ body {
 }
 
 main {
-  min-height: 70vh;
-  margin-top: 150px;
+  min-height: 110vh;
 }
-/* .img {
-  margin-top: 180px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-} */
 
 h3 {
   padding: 1rem 0;
@@ -180,7 +173,7 @@ h1 {
   padding: 50px;
   justify-content: center;
   margin-left: 200px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 .btnImp {
   margin-left: 20px;
@@ -189,18 +182,18 @@ h1 {
 
 .login {
   padding: 10px;
-  margin-left: -250px;
+  margin-left: 150px;
 }
 
 .register {
-  width: 500px;
-  padding: 10px;
+  margin-left: 500px;
+  margin-top: -200px;
 }
 
-.register .regImg {
+/* .register .regImg {
   width: 400px;
-  height: 400px;
-}
+  height: 300px;
+} */
 
 /***********************************
 @ media queries

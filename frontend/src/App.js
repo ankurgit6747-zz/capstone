@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-
+import Images from "./components/Images/Images";
 import { Container } from "react-bootstrap";
 import RegisterScreen from "./screens/RegisterScreen";
 import SigninScreen from "./screens/SigninScreen";
@@ -20,21 +20,11 @@ function App() {
     <Router>
       <Header />
       <main className="py-5">
-        {/* <img width="250px" src={logo} alt="" /> */}
-
         <Container>
           <Route path="/register" component={RegisterScreen} />
           <Route path="/login" component={SigninScreen} />
           <Route path="/" component={CounsellorScreen} exact />
           <Route path="/contact" component={Contact} />
-
-          {/* <div className="img" data-aos="zoom-in-right">
-            <Image
-              width={900}
-              height={200}
-              src="https://static.businessworld.in/article/article_extra_large_image/1569931494_o7vUpZ_counselling.jpg"
-            />
-          </div> */}
 
           {/* <Route path="/order/:id" component={OrderScreen} />
           <Route path="/bespeaking" component={PlaceOrderScreen} />
@@ -61,6 +51,9 @@ function App() {
           */}
         </Container>
       </main>
+      <div className="carousel">
+        <Images />
+      </div>
       <Footer />
     </Router>
   );
