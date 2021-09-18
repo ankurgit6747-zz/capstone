@@ -6,7 +6,7 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { login } from "../actions/userActions";
-import logImg from "../svg/login.svg";
+import logIn from "../svg/logIn.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -73,7 +73,7 @@ const SigninScreen = ({ location, history }) => {
 
             <Row className="py-3">
               <Col>
-                New User ?{" "}
+                New User ?
                 <Link
                   to={redirect ? `/register?redirect=${redirect}` : "/register"}
                 >
@@ -84,7 +84,12 @@ const SigninScreen = ({ location, history }) => {
           </FormContainer>
         </Col>
         <Col md={4} className="login">
-          <Image className="loginImg" src={logImg} />
+          <Image
+            data-aos="flip-right"
+            className="logIn"
+            width={500}
+            src={logIn}
+          />
         </Col>
       </Row>
     </Container>

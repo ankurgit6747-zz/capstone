@@ -6,12 +6,10 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { register } from "../actions/userActions";
-import regImg from "../svg/register.svg";
-import signup from "../svgs/signup.svg";
-// import img1 from "../components/img1.webp";
-
+import signin from "../svg/signin.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 //screen
 const RegisterScreen = ({ location, history }) => {
   useEffect(() => {
@@ -48,7 +46,7 @@ const RegisterScreen = ({ location, history }) => {
   };
   return (
     <Container>
-      <Row data-aos="fade-down-right">
+      <Row data-aos="fade-left">
         <Col md={8}>
           <FormContainer>
             <h1>Sign Up</h1>
@@ -113,8 +111,8 @@ const RegisterScreen = ({ location, history }) => {
           </FormContainer>
         </Col>
 
-        <Col className="register" md={4}>
-          <Image src={regImg} />
+        <Col className="register" data-aos="zoom-in" md={4}>
+          <Image width={600} src={signin} />
         </Col>
       </Row>
     </Container>

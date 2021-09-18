@@ -5,15 +5,15 @@ body {
 }
 
 main {
-  min-height: 100vh;
-  margin-top: 100px;
+  min-height: 70vh;
+  margin-top: 150px;
 }
-.img {
+/* .img {
   margin-top: 180px;
   align-items: center;
   justify-content: center;
   display: flex;
-}
+} */
 
 h3 {
   padding: 1rem 0;

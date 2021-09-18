@@ -23,14 +23,32 @@ const Header = ({ history }) => {
         <Working />
 
         <Container>
-          <LinkContainer to="/">
+          {/* <LinkContainer to="/">
             <Navbar.Brand>Hack Your Career</Navbar.Brand>
-          </LinkContainer>
+          </LinkContainer> */}
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
+              <LinkContainer to="/about-us">
+                <Nav.Link>
+                  <h5> &nbsp; About Us</h5>
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/faqs">
+                <Nav.Link>
+                  <h5>&nbsp; FAQs</h5>
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/contact">
+                <Nav.Link>
+                  <h5> &nbsp; Contact Us</h5>
+                </Nav.Link>
+              </LinkContainer>
+
               {userInfo && userInfo.isAdmin ? (
                 <NavDropdown title="Admin" id="adminmenu">
                   <LinkContainer to="/admin_dashboard">
@@ -65,13 +83,11 @@ const Header = ({ history }) => {
                 <LinkContainer to="/login">
                   <Nav.Link>
                     <i className="fas fa-user"></i>
-                    <b>Sign In</b>
-                    <b> &nbsp; &nbsp; &nbsp; About Us</b>
-                    <b> &nbsp; &nbsp; &nbsp; FAQs</b>
-                    <b> &nbsp; &nbsp; &nbsp; Contact Us</b>
+                    <h5>&nbsp; Sign In</h5>
                   </Nav.Link>
                 </LinkContainer>
               )}
+
               {/**{userInfo && userInfo.isAdmin && (
                 <NavDropdown title="Admin" id="adminmenu">
                   <LinkContainer to="/admin/userlist">
