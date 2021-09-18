@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
-// import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import love from "../svg/love.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Image } from "react-bootstrap";
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
+
+const contentStyle = {
+  marginLeft: "1300px",
+  marginTop: "-60px",
+  cursor: "pointer",
+};
 
 const Footer = () => {
   useEffect(() => {
@@ -22,10 +28,11 @@ const Footer = () => {
           />
           <hr />
           <p class="lead">
-            {/* <ArrowCircleUpIcon /> */}
             Copyright &copy; 2021 Hack ur Career | Rights reserved
           </p>
-          <button onClick={() => window.scroll(0, 0)}>Scroll to Top</button>
+          <div style={contentStyle} onClick={() => window.scroll(0, 0)}>
+            <ArrowCircleUpIcon />
+          </div>
         </div>
       </footer>
     </div>

@@ -18,7 +18,7 @@ const contentStyle1 = {
 
 const Images = () => {
   useEffect(() => {
-    Aos.init({ duration: 500 });
+    Aos.init({ duration: 2000 });
   }, []);
   return (
     <div>
@@ -30,7 +30,7 @@ const Images = () => {
       />
       <Image
         style={contentStyle}
-        data-aos="flip-right"
+        data-aos="zoom-in"
         src="https://www.univariety.com/app/themes/uni_new/images/home_header_mimg.png"
         alt="img"
       />

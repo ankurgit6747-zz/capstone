@@ -13,7 +13,7 @@ import "aos/dist/aos.css";
 //screen
 const RegisterScreen = ({ location, history }) => {
   useEffect(() => {
-    Aos.init({ duration: 500 });
+    Aos.init({ duration: 1500 });
   }, []);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
