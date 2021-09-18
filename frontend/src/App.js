@@ -8,6 +8,16 @@ import CounsellorScreen from "./screens/CounsellorScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import UsersListScreen from "./screens/UsersListScreen";
 import CounsellorListScreen from "./screens/CounsellorsListScreen";
+import CounsellorEditScreen from "./screens/CounsellorEditScreen";
+import AdminDashboardScreen from "./screens/AdminDashboardScreen";
+import OrderListScreen from "./screens/OrderListScreen";
+import UserEditScreen from "./screens/UserEditScreen";
+import DashboardScreen from "./screens/DashboardScreen";
+import BookingScreen from "./screens/BookingScreen";
+import SessionBookingScreen from "./screens/SessionBookingScreen";
+import OrderScreen from "./screens/OrderScreen";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import IndividualScreen from "./screens/IndividualScreen";
 
 function App() {
   return (
@@ -24,21 +34,22 @@ function App() {
             path="/admin/counsellorlist"
             component={CounsellorListScreen}
           />
-          {/* <Route path="/order/:id" component={OrderScreen} />
-          <Route path="/bespeaking" component={PlaceOrderScreen} />
-          <Route path="/confirm" component={BookingScreen} />
-          <Route path="/counsellor/:id" component={IndividualScreen} />
-          <Route path="/sessions/:id?" component={SessionBookingScreen} />
-
           <Route
             path="/admin/counsellor/:id/edit"
             component={CounsellorEditScreen}
           />
-
+          <Route path="/admin_dashboard" component={AdminDashboardScreen} />
           <Route path="/admin/orderlist" component={OrderListScreen} />
           <Route path="/admin/users/:id/edit" component={UserEditScreen} />
           <Route path="/dashboard" component={DashboardScreen} />
-          <Route path="/admin_dashboard" component={AdminDashboardScreen} />
+          <Route path="/confirm" component={BookingScreen} />
+          <Route path="/sessions/:id?" component={SessionBookingScreen} />
+          <Route path="/order/:id" component={OrderScreen} />
+          <Route path="/bespeaking" component={PlaceOrderScreen} />
+          <Route path="/counsellor/:id" component={IndividualScreen} />
+          {/* 
+
+
 
           */}
         </Container>
