@@ -9,7 +9,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import SigninScreen from "./screens/SigninScreen";
 import CounsellorScreen from "./screens/CounsellorScreen";
 import Working from "./components/Working";
-
+import Logo from "./components/Logo";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -20,6 +20,8 @@ function App() {
   return (
     <Router>
       <Header />
+      <Logo />
+
       <main className="py-5">
         <Container>
           <Route path="/register" component={RegisterScreen} />
