@@ -18,13 +18,13 @@ const contentStyle1 = {
 
 const Images = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 3000 });
   }, []);
   return (
     <div>
       <Image
         style={contentStyle1}
-        data-aos="flip-up"
+        data-aos="fade-right"
         src="https://www.dheya.com/wp-content/uploads/2021/01/college-student-career-counselling-600x310.png"
         alt="img"
       />

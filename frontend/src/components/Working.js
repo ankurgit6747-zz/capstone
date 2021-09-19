@@ -17,8 +17,14 @@ const Working = () => {
     setIsModalVisible(false);
   };
 
+  const contentStyle2 = {
+    marginTop: "100px",
+    display: "flex",
+    marginLeft: "500px",
+  };
+
   return (
-    <div className="working">
+    <div style={contentStyle2}>
       <Button type="primary" onClick={showModal}>
         <h6> How It Works</h6>
       </Button>

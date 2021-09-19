@@ -8,6 +8,7 @@ import { Container } from "react-bootstrap";
 import RegisterScreen from "./screens/RegisterScreen";
 import SigninScreen from "./screens/SigninScreen";
 import CounsellorScreen from "./screens/CounsellorScreen";
+import Working from "./components/Working";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/login" component={SigninScreen} />
           <Route path="/" component={CounsellorScreen} exact />
           <Route path="/contact" component={Contact} />
+          <Route path="/working" component={Working} />
 
           {/* <Route path="/order/:id" component={OrderScreen} />
           <Route path="/bespeaking" component={PlaceOrderScreen} />

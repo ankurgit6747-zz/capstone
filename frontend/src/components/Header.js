@@ -5,7 +5,6 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { logout } from "../actions/userActions";
 // import { Button } from "react-bootstrap";
 import "../bootstrap.min.css";
-import Working from "./Working";
 
 const Header = ({ history }) => {
   const dispatch = useDispatch();
@@ -20,8 +19,6 @@ const Header = ({ history }) => {
   return (
     <header>
       <Navbar expand="xl" collapseOnSelect>
-        <Working />
-
         <Container>
           {/* <LinkContainer to="/">
             <Navbar.Brand>Hack Your Career</Navbar.Brand>
@@ -46,6 +43,12 @@ const Header = ({ history }) => {
               <LinkContainer to="/contact">
                 <Nav.Link>
                   <h5> &nbsp; Contact Us</h5>
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/working">
+                <Nav.Link>
+                  <h5> &nbsp; How it Works</h5>
                 </Nav.Link>
               </LinkContainer>
 
