@@ -25,12 +25,16 @@ const Images = () => {
       <Image
         style={contentStyle1}
         data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
         src="https://www.dheya.com/wp-content/uploads/2021/01/college-student-career-counselling-600x310.png"
         alt="img"
       />
       <Image
         style={contentStyle}
-        data-aos="zoom-in"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
         src="https://www.univariety.com/app/themes/uni_new/images/home_header_mimg.png"
         alt="img"
       />

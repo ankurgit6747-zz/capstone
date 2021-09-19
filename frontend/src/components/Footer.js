@@ -21,7 +21,9 @@ const Footer = () => {
       <footer class="p-5  text-black text-center position-relative">
         <div class="container">
           <Image
-            data-aos="zoom-out-down"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
             className="love"
             width={200}
             src={love}
