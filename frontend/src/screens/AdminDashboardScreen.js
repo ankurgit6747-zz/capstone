@@ -7,8 +7,8 @@ import { listOrders } from "../actions/bookedActions";
 import { listUsers } from "../actions/userActions";
 
 import { Link } from "react-router-dom";
-import adminbgImg from "../svg/adminbg.svg";
-import adminImg from "../svg/admin.svg";
+// import adminbgImg from "../svg/adminbg.svg";
+// import adminImg from "../svg/admin.svg";
 import { Col, Image, Row, Card } from "react-bootstrap";
 import { Line } from "react-chartjs-2";
 import { dataPoint } from "../chartFn";
@@ -16,16 +16,16 @@ import { dataPoint } from "../chartFn";
 const AdminDashboardScreen = ({ location, history }) => {
   const dispatch = useDispatch();
 
-  const userDetails = useSelector((state) => state.userDetails);
+  const userDetails = useSelector(state => state.userDetails);
   const { loading, error, user } = userDetails;
 
-  const userLogin = useSelector((state) => state.userLogin);
+  const userLogin = useSelector(state => state.userLogin);
   const { userInfo } = userLogin;
 
-  const orderList = useSelector((state) => state.orderList);
+  const orderList = useSelector(state => state.orderList);
   const { loading: adminLoadingList, error: orderError, orders } = orderList;
 
-  const userList = useSelector((state) => state.userList);
+  const userList = useSelector(state => state.userList);
   const { loading: userLoading, error: userError, users } = userList;
 
   const [quotes, setQuotes] = useState([]);
@@ -98,8 +98,8 @@ const AdminDashboardScreen = ({ location, history }) => {
     }
 
     fetch("https://api.quotable.io/random")
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         // console.log(data);
         setQuotes(data);
         setIsLoading(false);
@@ -131,7 +131,7 @@ const AdminDashboardScreen = ({ location, history }) => {
                 <h1>Hello {user.name}</h1>
               </Col>
               <Col className="cen" md={4}>
-                <Image className="dashImg" src={adminbgImg} />
+                {/* <Image className="dashImg" src={adminbgImg} /> */}
               </Col>
             </Row>
           </div>
@@ -216,7 +216,8 @@ const AdminDashboardScreen = ({ location, history }) => {
                           <div className="contenth1 spandp">No sessions</div>{" "}
                           <Link
                             className="dpbtn secBtn btn btn-danger my-1"
-                            to="/profile">
+                            to="/profile"
+                          >
                             Profile
                           </Link>
                           <Link className="dpbtn btn disabled btn-danger my-1">
@@ -232,7 +233,8 @@ const AdminDashboardScreen = ({ location, history }) => {
                               </div>{" "}
                               <Link
                                 className="dpbtn secBtn btn btn-danger my-1"
-                                to="/profile">
+                                to="/profile"
+                              >
                                 Profile
                               </Link>
                               <Link className="dpbtn btn disabled btn-danger my-1">
@@ -246,11 +248,13 @@ const AdminDashboardScreen = ({ location, history }) => {
                               {orders[orders.length - 1].isConfirm ? (
                                 <i
                                   className="fas fa-check-circle"
-                                  style={{ color: "green", marginTop: "5px" }}>
+                                  style={{ color: "green", marginTop: "5px" }}
+                                >
                                   <span
                                     style={{
                                       color: "#2a9d8f",
-                                    }}>
+                                    }}
+                                  >
                                     Marked Session confirm of{" "}
                                     <span className="adminSpanin">
                                       {orders[orders.length - 1].user.name}{" "}
@@ -267,7 +271,8 @@ const AdminDashboardScreen = ({ location, history }) => {
                               ) : (
                                 <i
                                   className="far fa-clock "
-                                  style={{ color: "red", marginTop: "5px" }}>
+                                  style={{ color: "red", marginTop: "5px" }}
+                                >
                                   <span>
                                     Pending Session of USER:{" "}
                                     <span className="adminSpanin">
@@ -286,14 +291,14 @@ const AdminDashboardScreen = ({ location, history }) => {
                               <Col className="dpInfo contentProfile" md={2}>
                                 <Link
                                   className="dpbtn secBtn btn btn-danger my-1"
-                                  to="/profile">
+                                  to="/profile"
+                                >
                                   Profile
                                 </Link>
                                 <Link
                                   className="dpbtn btn btn-danger my-1"
-                                  to={`/order/${
-                                    orders[orders.length - 1]._id
-                                  }`}>
+                                  to={`/order/${orders[orders.length - 1]._id}`}
+                                >
                                   Session
                                 </Link>
                               </Col>
@@ -306,7 +311,7 @@ const AdminDashboardScreen = ({ location, history }) => {
                 </Col>
 
                 <Col className="cen  " md={4}>
-                  <Image className="dpImg" src={adminImg} />
+                  {/* <Image className="dpImg" src={adminImg} /> */}
                 </Col>
               </Row>
             </div>

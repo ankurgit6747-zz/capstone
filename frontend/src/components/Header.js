@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { logout } from "../actions/userActions";
-import { Button } from 'react-bootstrap';
-import '../bootstrap.min.css'
+import "../bootstrap.min.css";
 
 const Header = ({ history }) => {
   const dispatch = useDispatch();
-  const userLogin = useSelector((state) => state.userLogin);
+  const userLogin = useSelector(state => state.userLogin);
   const { userInfo } = userLogin;
 
   const logoutHandler = () => {
@@ -18,16 +17,40 @@ const Header = ({ history }) => {
 
   return (
     <header>
-      <Navbar bg="primary" variant="light" expand="lg" collapseOnSelect>
+      <Navbar variant="light" expand="xl" collapseOnSelect>
         <Container>
-          <LinkContainer to="/" >
-            <Navbar.Brand>Hack Your Carrer</Navbar.Brand>
-          </LinkContainer>
+          {/* <LinkContainer to="/">
+            <Navbar.Brand>Hack Your Career</Navbar.Brand>
+          </LinkContainer> */}
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
+              <LinkContainer to="/about-us">
+                <Nav.Link>
+                  <h5> &nbsp; About Us</h5>
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/faqs">
+                <Nav.Link>
+                  <h5>&nbsp; FAQs</h5>
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/contact">
+                <Nav.Link>
+                  <h5> &nbsp; Contact Us</h5>
+                </Nav.Link>
+              </LinkContainer>
+
+              <LinkContainer to="/working">
+                <Nav.Link>
+                  <h5> &nbsp; How it Works</h5>
+                </Nav.Link>
+              </LinkContainer>
+
               {userInfo && userInfo.isAdmin ? (
                 <NavDropdown title="Admin" id="adminmenu">
                   <LinkContainer to="/admin_dashboard">
@@ -61,7 +84,8 @@ const Header = ({ history }) => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i>Sign In
+                    <i className="fas fa-user"></i>
+                    <h5>&nbsp; Sign In</h5>
                   </Nav.Link>
                 </LinkContainer>
               )}
@@ -82,7 +106,6 @@ const Header = ({ history }) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-     
     </header>
   );
 };

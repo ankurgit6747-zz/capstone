@@ -4,14 +4,13 @@ import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import { useDispatch, useSelector } from "react-redux";
 import { listCounsellorDetails } from "../actions/counsellorActions";
-
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 
 const IndividualScreen = ({ history, match }) => {
   const dispatch = useDispatch();
 
-  const counsellorDetails = useSelector((state) => state.counsellorDetails);
+  const counsellorDetails = useSelector(state => state.counsellorDetails);
   const { loading, error, counsellor } = counsellorDetails;
   useEffect(() => {
     dispatch(listCounsellorDetails(match.params.id));
@@ -92,7 +91,8 @@ const IndividualScreen = ({ history, match }) => {
                       onClick={bookSessionHandler}
                       className="btn-block"
                       type="button"
-                      disabled={counsellor.availability !== "available"}>
+                      disabled={counsellor.availability !== "available"}
+                    >
                       Book Session
                     </Button>
                   </ListGroup.Item>

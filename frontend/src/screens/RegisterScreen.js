@@ -6,11 +6,15 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
 import { register } from "../actions/userActions";
-// import regImg from "../svg/register.svg";
-import signup from '../svgs/signup.svg'
+import signin from "../svg/signin.svg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 //screen
 const RegisterScreen = ({ location, history }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +23,7 @@ const RegisterScreen = ({ location, history }) => {
 
   const dispatch = useDispatch();
 
-  const userRegister = useSelector((state) => state.userRegister);
+  const userRegister = useSelector(state => state.userRegister);
   const { loading, error, userInfo } = userRegister;
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
@@ -30,7 +34,7 @@ const RegisterScreen = ({ location, history }) => {
     }
   }, [history, userInfo, redirect]);
 
-  const submitHandler = (e) => {
+  const submitHandler = e => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -41,8 +45,8 @@ const RegisterScreen = ({ location, history }) => {
     }
   };
   return (
-    <Container >
-      <Row>
+    <Container>
+      <Row data-aos="fade-left">
         <Col md={8}>
           <FormContainer>
             <h1>Sign Up</h1>
@@ -57,7 +61,8 @@ const RegisterScreen = ({ location, history }) => {
                   type="name"
                   placeholder="Enter name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}></Form.Control>
+                  onChange={e => setName(e.target.value)}
+                ></Form.Control>
               </Form.Group>
 
               <Form.Group controlId="email">
@@ -66,7 +71,8 @@ const RegisterScreen = ({ location, history }) => {
                   type="email"
                   placeholder="Enter email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}></Form.Control>
+                  onChange={e => setEmail(e.target.value)}
+                ></Form.Control>
               </Form.Group>
 
               <Form.Group controlId="password">
@@ -75,7 +81,8 @@ const RegisterScreen = ({ location, history }) => {
                   type="password"
                   placeholder="Enter password"
                   value={password}
-                  onChange={(e) => setPassword(e.target.value)}></Form.Control>
+                  onChange={e => setPassword(e.target.value)}
+                ></Form.Control>
               </Form.Group>
 
               <Form.Group controlId="confirmpassword">
@@ -84,9 +91,8 @@ const RegisterScreen = ({ location, history }) => {
                   type="password"
                   placeholder="Confirm password"
                   value={confirmPassword}
-                  onChange={(e) =>
-                    setConfirmPassword(e.target.value)
-                  }></Form.Control>
+                  onChange={e => setConfirmPassword(e.target.value)}
+                ></Form.Control>
               </Form.Group>
 
               <Button type="submit" variant="primary">
@@ -105,8 +111,8 @@ const RegisterScreen = ({ location, history }) => {
           </FormContainer>
         </Col>
 
-        <Col className="register" md={4}>
-          <Image className="regImg" src={signup} />
+        <Col className="register" data-aos="zoom-in" md={4}>
+          <Image width={600} src={signin} />
         </Col>
       </Row>
     </Container>
