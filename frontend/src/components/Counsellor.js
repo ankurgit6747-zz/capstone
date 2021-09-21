@@ -50,12 +50,13 @@ import Rating from "./Rating";
 
 const Counsellor = ({ counsellor }) => {
   return (
-    <Card className="my-3 p-2 cardCoun" style={{background: 'green'}}>
+    <Card className="my-3 p-2 cardCoun" style={{background: 'gray'}}>
+      {/* <Card.Img className="cardImg" src={counsellor.image} variant="top" /> */}
       <Card.Img className="cardImg" src={c1} variant="top" />
 
       <Card.Body>
         <Card.Title as="div">
-          <strong>John</strong>
+          <strong>{counsellor.name}</strong>
         </Card.Title>
 
         <Card.Text as="div">
@@ -68,14 +69,14 @@ const Counsellor = ({ counsellor }) => {
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroupItem style={{background: 'green', borderRadius:'3px'}}>
-          <Card.Subtitle className="mb-2 text-muted ctg" style={{color:'white'}}>
+        <ListGroupItem style={{background: 'transparent', borderRadius:'3px'}}>
+          {/* <Card.Subtitle className="mb-2 text-muted ctg" style={{color:'black'}}>
             {counsellor.category}
-          </Card.Subtitle>
+          </Card.Subtitle> */}
         </ListGroupItem>
       </ListGroup>
       <Link
-        className="btn btn-danger my-3 hbtn"
+        className="btn btn-success my-3 hbtn"
         to={`/counsellor/${counsellor._id}`}>
         Book 
       </Link>

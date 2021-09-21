@@ -37,14 +37,14 @@ const Contact = () => {
             <form className="content">
               <h4>Send Message:</h4>
               <input type="text" placeholder="Enter email" required />
-              <input type="text" placeholder="Enter Message" required />
+              <textarea type="text" placeholder="Enter Message" required />
               <button>Send</button>
             </form>
           </div>
         </div>
       </div>
       <div className="row">
-        <Image className="image" width={920} src={contact} />
+        <Image className="image" width={700} src={contact} />
       </div>
     </div>
   );

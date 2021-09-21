@@ -1,5 +1,6 @@
 .col {
   display: flex;
+  margin-left: 100px;
 }
 
 .contents > h4 {
@@ -19,9 +20,9 @@ li {
   padding-top: 15px;
   font-size: 1rem;
 }
-.image {
-  margin-left: 50px;
-}
+/* .image {
+  margin-left: 90px;
+} */
 
 .contents > span {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -50,7 +51,18 @@ form > input {
   padding: 4px 6px 4px;
   font-size: 1rem;
 }
-
+form > textarea {
+  margin-left: 200px;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: rgb(199, 205, 211);
+  color: black;
+  border: 2px solid aqua;
+  border-radius: 9px;
+  width: 60%;
+  padding: 4px 6px 4px;
+  font-size: 1rem;
+}
 .content > button {
   margin-left: 200px;
   font-style: italic;

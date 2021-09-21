@@ -31,7 +31,7 @@ const OrderListScreen = ({ history }) => {
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Table striped borderd hover responsive className="table-sm">
+        <Table striped borderd hover responsive className="table-sm" style={{background:'black'}}>
           <thead>
             <tr>
               <th>ID</th>
@@ -43,7 +43,7 @@ const OrderListScreen = ({ history }) => {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody style={{background:'black'}}>
             {orders.reverse().map((order) => (
               <tr key={order._id}>
                 <td>{order._id}</td>

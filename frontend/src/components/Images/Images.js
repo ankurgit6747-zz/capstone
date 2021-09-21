@@ -9,6 +9,7 @@ const contentStyle = {
   width: "400px",
   marginLeft: "100px",
 };
+
 // const contentStyle1 = {
 //   marginLeft: "200px",
 //   height: "250px",

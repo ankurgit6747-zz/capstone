@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import { Container } from "react-bootstrap";
 import RegisterScreen from "./screens/RegisterScreen";
@@ -22,17 +22,22 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import IndividualScreen from "./screens/IndividualScreen";
 import Working from "./components/Working";
 import Contact from "./components/Contact";
-import Images from "./components/Images/Images";
+// import Images from "./components/Images/Images";
 import Logo from "./components/Logo";
+import About from './components/About'
 
 function App() {
   return (
     <Router>
       <Header />
 
-      <LinkContainer to="/">
+      <LinkContainer to="/" exact>
         <Logo />
       </LinkContainer>
+
+      {/* <LinkContainer to="/about">
+        <About />
+      </LinkContainer> */}
 
       <main className="py-3">
         <Container>
@@ -41,6 +46,7 @@ function App() {
           <Route path="/" component={CounsellorScreen} exact />
           <Route path="/profile" component={ProfileScreen} />
           <Route path="/admin/userlist" component={UsersListScreen} />
+          <Route path='/about' component={About} />
           <Route
             path="/admin/counsellorlist"
             component={CounsellorListScreen}

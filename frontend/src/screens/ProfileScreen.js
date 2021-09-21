@@ -73,7 +73,7 @@ const ProfileScreen = ({ location, history }) => {
             {orders === null ? (
               <Message>No Session Records</Message>
             ) : (
-              <Table striped bordered hover responsive className="table-sm">
+              <Table striped bordered hover responsive className="table-sm" style={{background: 'black'}}>
                 <thead>
                   <tr>
                     <th>ID</th>

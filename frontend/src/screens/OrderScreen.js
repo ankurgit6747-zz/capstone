@@ -58,7 +58,7 @@ const OrderScreen = ({ match }) => {
       <Row>
         <Col md={6}>
           <ListGroup variant="flush">
-            <ListGroup.Item>
+            <ListGroup.Item style={{background:'transparent'}}>
               <h2>Session Info</h2>
               <p>
                 Name: <strong>{order.user.name}</strong>
@@ -81,14 +81,14 @@ const OrderScreen = ({ match }) => {
               </p>
             </ListGroup.Item>
             {userInfo.isAdmin ? (
-              <ListGroup.Item>
-                <Link className="btn btn-danger my-3" to="/admin/orderlist">
+              <ListGroup.Item style={{background:'transparent'}}>
+                <Link className="btn btn-success my-3" to="/admin/orderlist">
                   Go Back
                 </Link>
               </ListGroup.Item>
             ) : (
-              <ListGroup.Item>
-                <Link className="btn btn-danger my-3" to="/profile">
+              <ListGroup.Item style={{background:'transparent'}}>
+                <Link className="btn btn-success my-3" to="/profile">
                   Go Back
                 </Link>
               </ListGroup.Item>
@@ -96,12 +96,12 @@ const OrderScreen = ({ match }) => {
           </ListGroup>
         </Col>
 
-        <Col md={6}>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
+        <Col md={6} >
+          <ListGroup variant="flush" >
+            <ListGroup.Item style={{background:'transparent'}}>
               <h2>Vital Info</h2>
               {order.sessionItems.map((item, index) => (
-                <ListGroup.Item key={index}>
+                <ListGroup.Item key={index} style={{color:'white'}}>
                   <Row>
                     <Col md={6}>
                       <Image
@@ -118,7 +118,7 @@ const OrderScreen = ({ match }) => {
               {order.sessionItems.map((item, index) => (
                 <ListGroup.Item key={index}>
                   <Row>
-                    <Col>
+                    <Col style={{color:'white'}}>
                       <span>Session : </span>
                       {order.isConfirm ? (
                         <i
@@ -138,7 +138,7 @@ const OrderScreen = ({ match }) => {
               {order.sessionItems.map((item, index) => (
                 <ListGroup.Item key={index}>
                   <Row>
-                    <Col>
+                    <Col md={6}>
                       {order.sessionDone ? (
                         <Message variant="success">
                           Session status: Done at {order.sessionDetails.date}{" "}
@@ -152,7 +152,7 @@ const OrderScreen = ({ match }) => {
                         </Message>
                       )}
                     </Col>
-                    <Col>
+                    <Col  md={6}>
                       <div>
                         {order.sessionDone ? (
                           <i
@@ -171,9 +171,9 @@ const OrderScreen = ({ match }) => {
                 </ListGroup.Item>
               ))}
 
-              <ListGroup.Item>
-                <Row>
-                  <Col>
+              <ListGroup.Item >
+                <Row >
+                  <Col  md={6}>
                     {order.isConfirm ? (
                       <Button
                         onClick={meethandler}

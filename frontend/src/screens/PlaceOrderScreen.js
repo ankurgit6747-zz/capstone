@@ -35,27 +35,27 @@ const PlaceOrderScreen = ({ history }) => {
   return (
     <>
       <Row>
-        <Col md={6}>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
+        <Col md={6} >
+          <ListGroup variant="flush"  >
+            <ListGroup.Item style={{background:'transparent'}}>
               <h2>Session Info</h2>
               <p>
                 <Message>
                   For the Counsellor : {session.sessionDetails.note}
                 </Message>
-                <Message variant="warning">
-                  Scheduled Date :{session.sessionDetails.date}
-                </Message>
                 <Message variant="primary">
-                  Scheduled Time :{session.sessionDetails.time}
+                  Scheduled Date and Time : {session.sessionDetails.date } || {session.sessionDetails.time}
                 </Message>
+                {/* <Message variant="primary">
+                  Scheduled Time :{session.sessionDetails.time}
+                </Message> */}
                 <Message variant="danger">
                   Scheduled For :{session.sessionDetails.forWhom}
                 </Message>
               </p>
             </ListGroup.Item>
 
-            <ListGroup.Item>
+            <ListGroup.Item style={{background:'transparent'}}>
               <h2>Vital Info</h2>
               <p>
                 <Message>
@@ -66,11 +66,11 @@ const PlaceOrderScreen = ({ history }) => {
               </p>
             </ListGroup.Item>
 
-            <ListGroup.Item>
+            {/* <ListGroup.Item style={{background:'transparent'}}>
               {error && <Message variant="danger">{error}</Message>}
-            </ListGroup.Item>
+            </ListGroup.Item> */}
 
-            <ListGroup.Item>
+            <ListGroup.Item style={{background:'transparent'}}>
               <Link className="btn btn-danger my-3" to="/confirm">
                 Go Back
               </Link>

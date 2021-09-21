@@ -36,7 +36,7 @@ const SessionBookingScreen = ({ match, history }) => {
             No sessions to confirm | <Link to="/">Go Back</Link>
           </Message>
         ) : (
-          <ListGroup variant="flush">
+          <ListGroup variant="flush" style={{color: 'white'}}>
             {sessionItems.map((item) => (
               <ListGroup.Item key={item.counsellor}>
                 <Row>
@@ -63,15 +63,16 @@ const SessionBookingScreen = ({ match, history }) => {
                   <Col md={2}>
                     <Button
                       type="button"
-                      variant="dark"
+                      variant="danger"
                       onClick={() => removeHandler(item.counsellor)}>
-                      <i className="fas fa-trash"></i>
+                      {/* <i className="fas fa-trash"></i> */}
+                      Delete
                     </Button>
                   </Col>
                   <Col md={2}>
                     <Button
                       type="button"
-                      variant="dark"
+                      variant="success"
                       className="btn-block"
                       disabled={sessionItems.length === 0}
                       onClick={bookHandler}>

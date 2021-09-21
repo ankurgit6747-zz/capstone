@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Form, Button, Container, Col, Row, Image } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import bookImg from "../svg/booking.svg";
+import bookImg from "../svgs/booking.svg";
 import FormContainer from "../components/FormContainer";
 import { saveSessionDetails } from "../actions/sessionActions";
 
@@ -28,7 +28,7 @@ const BookingScreen = ({ history }) => {
     <>
       <Container>
         <Row>
-          <Col md={10}>
+          <Col md={8}>
             <FormContainer>
               <h1>Book Session</h1>
 
@@ -92,7 +92,7 @@ const BookingScreen = ({ history }) => {
               </Form>
             </FormContainer>
           </Col>
-          <Col className="login" md={2}>
+          <Col className="login" md={4} >
             <Image className="loginImg" src={bookImg} />
           </Col>
         </Row>

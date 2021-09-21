@@ -40,7 +40,7 @@ const UsersListScreen = ({ history }) => {
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Table striped borderd hover responsive className="table-sm">
+        <Table striped borderd hover responsive className="table-sm" style={{background:'black'}}>
           <thead>
             <tr>
               <th>ID</th>
@@ -69,14 +69,17 @@ const UsersListScreen = ({ history }) => {
                 <td>
                   <LinkContainer to={`/admin/users/${user._id}/edit`}>
                     <Button variant="light" className="btn-sm">
-                      <i className="fas fa-edit"></i>
+                      {/* <i className="fas fa-edit"></i> */}
+                      Edit
                     </Button>
                   </LinkContainer>
+                  &nbsp; &nbsp;
                   <Button
                     variant="danger"
                     className="btn-sm"
                     onClick={() => deleteHandler(user._id)}>
-                    <i className="fas fa-trash"></i>
+                      Delete
+                    {/* <i className="fas fa-trash"></i> */}
                   </Button>
                 </td>
               </tr>

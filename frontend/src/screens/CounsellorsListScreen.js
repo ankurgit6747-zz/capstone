@@ -68,10 +68,10 @@ const CounsellorsListScreen = ({ history, match }) => {
   return (
     <>
       <Row className="align-items-center">
-        <Col>
+        <Col md={6}>
           <h1>Counsellors</h1>
         </Col>
-        <Col className="text-right">
+        <Col className="text-right" md={6}>
           <Button className="my-3" onClick={createCounsellorHandler}>
             <i className="fas fa-plus"></i> Create Counsellor
           </Button>
@@ -89,7 +89,7 @@ const CounsellorsListScreen = ({ history, match }) => {
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Table striped borderd hover responsive className="table-sm">
+        <Table striped borderd hover responsive className="table-sm" style={{background: 'black'}}>
           <thead>
             <tr>
               <th>ID</th>
@@ -102,7 +102,7 @@ const CounsellorsListScreen = ({ history, match }) => {
 
           <tbody>
             {counsellors.map((counsellor) => (
-              <tr key={counsellor._id}>
+              <tr key={counsellor._id} >
                 <td>{counsellor._id}</td>
                 <td>{counsellor.name}</td>
                 <td>{counsellor.category}</td>
@@ -111,14 +111,17 @@ const CounsellorsListScreen = ({ history, match }) => {
                   <LinkContainer
                     to={`/admin/counsellor/${counsellor._id}/edit`}>
                     <Button variant="light" className="btn-sm">
-                      <i className="fas fa-edit"></i>
+                      {/* <i className="fas fa-edit"></i> */}
+                      Edit
                     </Button>
                   </LinkContainer>
+                  &nbsp; &nbsp;
                   <Button
                     variant="danger"
                     className="btn-sm"
                     onClick={() => deleteHandler(counsellor._id)}>
-                    <i className="fas fa-trash"></i>
+                    {/* <i className="fas fa-trash"></i> */}
+                    Delete
                   </Button>
                 </td>
               </tr>

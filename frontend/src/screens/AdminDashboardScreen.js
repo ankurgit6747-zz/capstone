@@ -119,12 +119,12 @@ const AdminDashboardScreen = ({ location, history }) => {
   return (
     <>
       <div>
-        <h1>Dashboard</h1>
+        <h2>Dashboard</h2>
         {loading && <Loader />}
         {error && <Message variant="danger">{error}</Message>}
       </div>
       <Row>
-        <Col md={8}>
+        <Col md={6}>
           <div className="dashContainer">
             <Row>
               <Col className="cen dashName" md={8}>
@@ -136,7 +136,7 @@ const AdminDashboardScreen = ({ location, history }) => {
             </Row>
           </div>
         </Col>
-        <Col md={4}>
+        {/* <Col md={4}>
           <div className="dashContainer">
             {isLoading ? (
               "loading..."
@@ -152,12 +152,8 @@ const AdminDashboardScreen = ({ location, history }) => {
               </Card>
             )}
           </div>
-        </Col>
-      </Row>
-
-      <div>
-        <Row>
-          <Col md={4}>
+        </Col> */}
+        <Col md={6}>
             {userLoading ? (
               "Loading.."
             ) : userError ? (
@@ -198,12 +194,57 @@ const AdminDashboardScreen = ({ location, history }) => {
               </div>
             )}
           </Col>
-          <Col md={8}>
+      </Row>
+
+      <div>
+        <Row>
+          {/* <Col md={4}>
+            {userLoading ? (
+              "Loading.."
+            ) : userError ? (
+              "404 Not Found!"
+            ) : (
+              <div className="dashContainer">
+                <Row>
+                  <div className="chartData">
+                    <Line
+                      data={userChartData}
+                      options={{
+                        responsive: true,
+                        scales: {
+                          yAxes: [
+                            {
+                              ticks: {
+                                autoSkip: true,
+                                maxTicksLimit: 10,
+                                beginAtZero: true,
+                              },
+                              gridLines: {
+                                display: false,
+                              },
+                            },
+                          ],
+                          xAxes: [
+                            {
+                              gridLines: {
+                                display: false,
+                              },
+                            },
+                          ],
+                        },
+                      }}
+                    />
+                  </div>
+                </Row>
+              </div>
+            )}
+          </Col> */}
+          <Col md={6}>
             <div className="dashContainer ">
               <Row>
-                <Col className="cen " md={8}>
-                  <Col className="dpInfo" md={4}>
-                    <div className="contenth1 cardcont">{user.name}</div>
+                <Col className="cen " md={12}>
+                  <Col className="dpInfo" md={10}>
+                    <div className="contenth1 cardcont" style={{color:'black'}}>{user.name}</div>
                   </Col>
                   {adminLoadingList ? (
                     "loading"
@@ -215,17 +256,20 @@ const AdminDashboardScreen = ({ location, history }) => {
                         <Col className="dpInfo contentProfile" md={2}>
                           <div className="contenth1 spandp">No sessions</div>{" "}
                           <Link
-                            className="dpbtn secBtn btn btn-danger my-1"
+                            // className="dpbtn secBtn btn btn-success my-1"
                             to="/profile"
                           >
+                            <button className='btn btn-success'>
+
                             Profile
+                            </button>
                           </Link>
                           <Link className="dpbtn btn disabled btn-danger my-1">
                             Sessions
                           </Link>
                         </Col>
                       ) : (
-                        <Col md={8}>
+                        <Col md={12} >
                           {orders[orders.length - 1].sessionDone ? (
                             <Col className="dpInfo contentProfile" md={2}>
                               <div className="contenth1 spandp">
@@ -318,7 +362,7 @@ const AdminDashboardScreen = ({ location, history }) => {
           </Col>
         </Row>
       </div>
-      <Row>
+      {/* <Row>
         <Col md={12}>
           <div className="dashContainer">
             <div className="chartData">
@@ -352,7 +396,7 @@ const AdminDashboardScreen = ({ location, history }) => {
             </div>
           </div>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 };

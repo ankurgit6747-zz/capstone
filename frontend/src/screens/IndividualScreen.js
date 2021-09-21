@@ -30,15 +30,15 @@ const IndividualScreen = ({ history, match }) => {
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Row>
-          <Col md={6}>
-            <Image src={counsellor.image} alt={counsellor.name} fluid />
+        <Row >
+          <Col md={4} >
+            <Image src={counsellor.image}  fluid />
           </Col>
-          <Col md={6}>
-            <Col md={12}>
+          <Col md={8} style={{color: 'white'}}>
+            <Col md={12} style={{color: 'white'}}>
               <ListGroup variant="flush">
-                <ListGroup.Item>
-                  <h2>{counsellor.name}</h2>
+                <ListGroup.Item >
+                  <h2 style={{color: 'white'}}>{counsellor.name}</h2>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Rating
@@ -52,7 +52,7 @@ const IndividualScreen = ({ history, match }) => {
               </ListGroup>
             </Col>
 
-            <Col md={12}>
+            <Col md={12} >
               <Card>
                 <ListGroup variant="flush">
                   <ListGroup.Item>

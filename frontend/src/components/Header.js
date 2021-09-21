@@ -27,6 +27,11 @@ const Header = ({ history }) => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
+            <LinkContainer to="/">
+                <Nav.Link>
+                  <h5> &nbsp; Home</h5>
+                </Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/about-us">
                 <Nav.Link>
                   <h5> &nbsp; About Us</h5>
@@ -70,7 +75,7 @@ const Header = ({ history }) => {
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : userInfo ? (
-                <NavDropdown title={userInfo.name} id="username">
+                <NavDropdown title={userInfo.name} id="username" style={{fontWeight:'bold'}}>
                   {/* <LinkContainer to="/dashboard">
                     <NavDropdown.Item>Dashboard</NavDropdown.Item>
                   </LinkContainer> */}
